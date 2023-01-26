@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Bootstrap v4.4.1 (https://getbootstrap.com/)-->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <script src="js/main.js"></script>
+    <title>营销号生成器</title>
+</head>
+
+<body onload="onload()">
+    <h3>营销号生成器</h3>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-5 col-xs-12">
+                <form action="javascript:void(0);" autocomplete="off">
+                    <div class="form-group">
+                        <lable for="subject">主体：</lable>
+                        <input type="text" id="subject" class="form-control" placeholder="www.zzvips.com " required />
+                    </div>
+                    <div class="form-group">
+                        <lable for="event">事件：</lable>
+                        <input type="text" id="event" class="form-control" placeholder="www.zzvips.com" required />
+                    </div>
+                    <div class="form-group">
+                        <lable for="event2">另一种说法：</lable>
+                        <input type="text" id="event2" class="form-control" placeholder="www.zzvips.com" required />
+                    </div>
+                    <input type="submit" value="生成" class="btn btn-primary" onclick="generate()" />
+                    <input type="button" value="转换成语音" class="btn btn-primary" id="aud" onclick="audios()" />
+                    <input type="button" value="关闭语音" class="btn btn-primary"  onclick="del()" />
+
+                </form>
+            </div>
+            <div class="col-sm-7 col-xs-12">
+                <textarea id="result" onchange="auto_grow(this)" oninput="auto_grow(this)"
+                    placeholder="　　www.zzvips.com#013;&#010;　　www.zzvips.com&#013;&#010;　　"></textarea>
+            </div>
+        </div>
+    </div>
+    <div id="footer">
+        <audio src="" id="myaudio" controls="controls" loop="false" hidden="true"></audio>
+        <audio src="music/bgm.mp3" id="bgm" controls="controls" loop="false" hidden="true"></audio>
+        <p>某楼的权限大佬们请勿搬砖 谢谢配合！</p>
+        <P>技术支持 ：<a href="http://www.zzvips.com" title="">源码之家 </a> </P>
+    </div>
+
+</body>
+
+</html>
